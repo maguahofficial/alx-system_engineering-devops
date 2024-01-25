@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#   This displays numbs from 1 to 100 in list format.
+#   This displays "FizzBuzz" when the numbs is a multiple of 3 and 5.
+#   This displays "Fizz" when the numbs is a multiple of 3.
+#   This displays "Buzz" when the numbs is a multiple of 5.
+#   Otherwise, displays the number.
+
+for numx in {1..100}
+do
+  if (( numx % 3 == 0 && numx % 5 == 0 ))
+  then
+    echo "FizzBuzz"
+  elif (( numx % 3 == 0 ))
+  then
+    echo "Fizz"
+  elif (( numx % 5 == 0 ))
+  then
+    echo "Buzz"
+  else
+    echo "$numx"
+  fi
+done
+

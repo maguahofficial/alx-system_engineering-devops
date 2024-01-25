@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This displays "Best School" 10 times using a while loop.
+#   the 9th iteration it will display "Hi" before "Best School".
+
+countvrble=0
+
+while [ $countvrble -lt 10 ]
+do
+  if [ $countvrble -eq 9 ]
+  then
+    echo "Hi"
+  fi
+  echo "Best School"
+  (( countvrble++ ))
+done
+

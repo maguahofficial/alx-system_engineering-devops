@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# this loops from 1 to 10 and displays:
+#   "bad luck" for  4th iteration
+#   "good luck" for 8th iteration
+#   "Best School" for other iterations
+
+countvrble=0
+
+while [ $countvrble -lt 10 ]
+do
+  if [ $countvrble -eq 3 ]
+  then
+    echo "bad luck"
+  elif [ $countvrble -eq 7 ]
+  then
+    echo "good luck"
+  else
+    echo "Best School"
+  fi
+  (( countvrble++ ))
+done

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Will display "Best School" 10 tyms using a for loop.
+
+for (( ix=0; ix<10; ix++ )) 
+do
+  echo "Best School"
+done

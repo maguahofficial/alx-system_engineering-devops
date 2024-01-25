@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This displays numbs from 1 to 20 in addition to:
+#   "bad luck from China" for 4th iteration
+#   "bad luck from Japan" for 9th iteration
+#   "bad luck from Italy" for 17th loop iteration
+
+countvrble=1
+
+while [ $countvrble -le 20 ]
+do
+  echo "$countvrble"
+  case $countvrble in
+    "4") echo "bad luck from China";;
+    "9") echo "bad luck from Japan";;
+    "17") echo "bad luck from Italy";;
+  esac
+  (( countvrble++ ))
+done

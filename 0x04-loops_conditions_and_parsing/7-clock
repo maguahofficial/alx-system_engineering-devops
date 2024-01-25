@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This displays the time for 12 horus and 59 minutes.
+# This displays hours from 0 to 12
+# This displays minutes from 1 to 59
+
+hourvrble=0
+
+while [ $hourvrble -le 12 ]
+do
+  echo "Hour: $hourvrble"
+  minutevrble=1
+  while [ $minutevrble -le 59 ]
+  do
+    echo "$minute"
+    (( minutevrble++ ))
+  done
+  (( hourvrble++ ))
+done
+

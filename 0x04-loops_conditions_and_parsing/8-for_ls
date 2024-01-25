@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This displays the contents of the current directory in list format.
+# It only displays the part of the name after the first dash. 
+
+listvarble=$(ls)
+for ix in $listvarble; do
+  echo "$ix" | cut -d '-' -f2
+done
+
