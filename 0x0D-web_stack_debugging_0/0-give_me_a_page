@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#code is running apache service on designated container
+
+echo "Serve:wqrName localhost" >> /etc/apache2.conf
+service apache2 start
