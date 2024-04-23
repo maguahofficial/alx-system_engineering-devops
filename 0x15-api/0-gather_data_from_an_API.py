@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """uses a REST API, for a given employee ID"""
 
 import requests as req
