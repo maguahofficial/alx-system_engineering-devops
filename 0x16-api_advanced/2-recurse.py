@@ -21,10 +21,10 @@ v1.0.0 (by /u/firdaus_cartoon_jr)"
 
     results = response.json().get("data")
     after = results.get("after")
-    countvr += results.get("dist")
+    count += results.get("dist")
     for cx in results.get("children"):
         hot_list.append(cx.get("data").get("title"))
 
     if after is not None:
-        return recurse(subreddit, hot_list, after, countvr)
+        return recurse(subreddit, hot_list, after, count)
     return hot_list
