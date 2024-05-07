@@ -1,7 +1,6 @@
-!/usr/bin/python3
+#!/usr/bin/python3
 """This Contains recurse function"""
 import requests
-
 
 def recurse(subreddit, hot_list=[], after="", count=0):
     """Function returns a list of titles of all hot posts of a given subreddit."""
@@ -22,10 +21,10 @@ v1.0.0 (by /u/firdaus_cartoon_jr)"
 
     results = response.json().get("data")
     after = results.get("after")
-    count += results.get("dist")
-    for c in results.get("children"):
-        hot_list.append(c.get("data").get("title"))
+    countvr += results.get("dist")
+    for cx in results.get("children"):
+        hot_list.append(cx.get("data").get("title"))
 
     if after is not None:
-        return recurse(subreddit, hot_list, after, count)
+        return recurse(subreddit, hot_list, after, countvr)
     return hot_list
