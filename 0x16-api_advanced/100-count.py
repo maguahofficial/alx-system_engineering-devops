@@ -43,7 +43,7 @@ def recurse(subreddit, dictionary, after=None):
         return None
 
     dicx = res.json()
-    hot_posts = dic['data']['children']
+    hot_posts = dicx['data']['children']
     add_title(dictionary, hot_posts)
     after = dicx['data']['after']
     if not after:
@@ -56,10 +56,10 @@ def count_words(subreddit, word_list, dictionary=None):
     if dictionary is None:
         dictionary = {}
 
-    for wordx in word_list:
-        wordx = word.lower()
-        if wordx not in dictionary:
-            dictionary[wordx] = 0
+    for word in word_list:
+        word = word.lower()
+        if word not in dictionary:
+            dictionary[word] = 0
 
     recurse(subreddit, dictionary)
 
