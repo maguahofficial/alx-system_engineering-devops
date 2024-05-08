@@ -21,4 +21,3 @@ def number_of_subscribers(subreddit):
 
 subreddit = "python"
 print(f"Number of subscribers in r/{subreddit}: {number_of_subscribers(subreddit)}")
-
